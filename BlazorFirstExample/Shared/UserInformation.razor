@@ -1,0 +1,20 @@
+﻿<dl>
+    @if (!String.IsNullOrWhiteSpace(User.Name))
+    {
+        <dt>Nombre:</dt>
+        <dd>@User.Name</dd>
+    }
+</dl>
+<dl>
+    @if (!String.IsNullOrWhiteSpace(User.LastName))
+    {
+        <dt>Apellidos:</dt>
+        <dd>@User.LastName</dd>
+    }
+</dl>
+
+@functions 
+{
+    [Parameter] public UserData User { get; set; }
+
+}
